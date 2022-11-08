@@ -711,6 +711,10 @@ nav .wrapper {
   max-width: 40rem !important;
 }
 
+.layout-home{
+  margin: 10rem auto !important
+}
+
 .product {
   overflow: hidden;
 }
