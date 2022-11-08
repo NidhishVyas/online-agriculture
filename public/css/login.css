@@ -200,6 +200,12 @@ a {
   margin-bottom: 20px;
 }
 
+.google-div{
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
 .apps {
   font-size: 30px;
   border: 1px solid rgba(0, 0, 0, 0.3);

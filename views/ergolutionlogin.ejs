@@ -20,6 +20,12 @@
       href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
       rel="stylesheet"
     />
+    <meta
+      name="google-signin-client_id"
+      content="694152639434-qt433d7edmv6kmun5jjm4rgaae4lb660.apps.googleusercontent.com"
+    />
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <title>Ergolution</title>
   </head>
   <body>
@@ -61,13 +67,27 @@
             </div>
           </form>
         </div>
-        <div class="form-container sign-in-container">
-          <h1 class="main-text">Ergolution</h1>
-          <div class="social">
-            <i class="bx bxl-google apps"></i>
-          </div>
-          <p class="use-email">or use your email account</p>
-          <form action="/signin" method="POST">
+        <form action="/login/auth/google" method="post">
+          <div class="form-container sign-in-container">
+            <h1 class="main-text">Ergolution</h1>
+            <div class="google-div">
+              <div
+                id="g_id_onload"
+                data-client_id="694152639434-qt433d7edmv6kmun5jjm4rgaae4lb660.apps.googleusercontent.com"
+                data-login_uri="http://localhost:3000/login/auth/google"
+                data-auto_prompt="false"
+              ></div>
+              <div
+                class="g_id_signin"
+                data-type="standard"
+                data-size="large"
+                data-theme="outline"
+                data-text="sign_in_with"
+                data-shape="rectangular"
+                data-logo_alignment="left"
+              ></div>
+            </div>
+            <p class="use-email">or use your email account</p>
             <div class="creds">
               <div class="field">
                 <div class="underline"></div>
@@ -85,8 +105,8 @@
             <div class="sign-in-btn">
               <input type="submit" value="Sign in" />
             </div>
-          </form>
-        </div>
+          </div>
+        </form>
         <div class="overlay-container">
           <div class="overlay">
             <div class="overlay-panel overlay-left">
